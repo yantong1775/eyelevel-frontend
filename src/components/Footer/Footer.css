@@ -1,0 +1,12 @@
+.footer {
+  margin-top: auto;
+  margin-bottom: 0;
+  transition: margin-left 0.3s ease;
+  color: aliceblue;
+  padding: 1.5rem;
+  font-family: "Georgia", serif;
+  z-index: 10;
+  background-color: #153448;
+  clear: both;
+  text-align: center;
+}

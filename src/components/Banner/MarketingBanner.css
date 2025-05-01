@@ -1,0 +1,80 @@
+.ant-carousel {
+  width: 100%; /* Ensuring it takes the full width of its container */
+  overflow: hidden;
+}
+
+.ant-carousel h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: auto; /* Allow height to adjust based on content */
+  color: #6f5224;
+  line-height: 1.4; /* Adjusted line-height */
+  text-align: center;
+}
+
+.marketing-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfd0b8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  padding: 5%;
+  color: #6f5224;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.marketing-slide2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Add background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  color: black;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.msg-container {
+  text-align: center;
+  width: 100%; /* Ensure it takes full width */
+  max-width: 80%; /* Limit width but still allow it to be responsive */
+  margin: 0 auto; /* Center it */
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjust the breakpoint as needed */
+  .marketing-slide,
+  .marketing-slide2 {
+    height: 168px; /* Adjusted height for smaller screens */
+    padding: 5% 10%;
+  }
+  .ant-carousel h3 {
+    font-size: 16px;
+  }
+  .ant-carousel,
+  .marketing-slide p,
+  .marketing-slide2 p {
+    font-size: 0.75rem;
+  }
+}
+
+.msg-container {
+  text-align: center;
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  max-height: 70vh; /* This limits the height based on the viewport height */
+  overflow-y: auto; /* This allows scrolling if content overflows */
+}

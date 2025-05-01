@@ -1,0 +1,207 @@
+/* Container that centers content both vertically and horizontally */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center items horizontally */
+  justify-content: center; /* center items vertically */
+  min-height: 30vh; /* take full screen height */
+  margin: 0 auto;
+  margin-bottom: 10vh;
+  font-family: sans-serif;
+}
+
+/* Dropzone styles */
+.dropzone {
+  width: 50%;
+  max-width: 600px;
+  min-height: 250px;
+  border: 10px solid #948979; /* inner border */
+  border-radius: 16px;
+  background-color: #153448; /* a brown background color */
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropzone p,
+.dropzone em {
+  color: #f0e6d6; /* ensure paragraphs and em elements have the lighter color */
+}
+
+/* Highlight the dropzone when dragging files over it */
+.dropzone.active {
+  background-color: #f6efb4;
+  text-align: center;
+  font-size: inherit;
+}
+
+.dropzone.active p,
+.dropzone.active em {
+  color: #000000; /* ensure paragraphs and em elements have the lighter color */
+  font-size: 18px;
+}
+
+/* Error list styles */
+.error-list {
+  margin-top: 16px;
+  color: #ff6265;
+  font-weight: bold;
+}
+
+.error-item {
+  margin-bottom: 8px;
+}
+
+/* File preview styles */
+.file-preview {
+  color: rgb(0, 0, 0);
+  margin-top: 16px;
+  width: 50%;
+  max-width: 600px;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+/* Upload button styles */
+.upload-button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  opacity: 0.9;
+}
+
+/* Upload status styles */
+.upload-status {
+  margin-top: 16px;
+}
+
+.upload-success {
+  margin-top: 16px;
+  color: green;
+  font-weight: bold;
+}
+
+/* Progress bar styles */
+.progress-bar {
+  width: 100px;
+  height: 6px;
+  background: #ccc;
+  position: relative;
+  margin: 8px auto;
+}
+
+.progress-bar::after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 50%;
+  background: #007bff;
+  animation: progressAnim 2s ease infinite;
+}
+
+@keyframes progressAnim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.processing-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.processing-modal {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.processing-modal h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.processing-modal p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.processing-indicator {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Dropzone styles */
+  .dropzone {
+    width: 90%;
+    max-width: 600px;
+    min-height: 250px;
+    border: 10px solid #f8bc45; /* inner border */
+    border-radius: 16px;
+    background-color: #3b2815; /* a brown background color */
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

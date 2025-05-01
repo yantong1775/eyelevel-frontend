@@ -1,0 +1,210 @@
+.landing-headers {
+  color: aliceblue;
+  margin: 20px;
+  margin-top: 50px;
+  text-align: left;
+  font-family: "Georgia", serif;
+}
+
+.hub {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the left */
+  margin: 0 auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.landing-search {
+  display: flex;
+  align-items: center;
+  width: auto; /* Adjust width as needed */
+  max-width: 100%; /* Set maximum width */
+  border-radius: 50px;
+  background-color: rgba(123, 112, 63, 0.5);
+  margin: 10px 0; /* Remove left margin */
+  padding: 30px;
+  position: relative; /* This is crucial for absolute positioning of children */
+  margin-left: 0px;
+}
+
+.bar-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 10px; /* Adjust padding inside search bar */
+  background-color: transparent;
+}
+
+.landing-search-bar {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: -10px;
+  margin-left: 26px;
+}
+
+.landing-search-button {
+  position: absolute;
+  right: 10px; /* Adjust based on size of button */
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  width: 30px; /* Width of the button */
+  height: 30px; /* Height of the button */
+  padding: 0; /* Reset padding */
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: -50px;
+  margin-bottom: -10px;
+}
+
+.landing-search-button:disabled {
+  cursor: not-allowed;
+}
+
+.landing-search-bar::placeholder {
+  color: #fff;
+}
+
+.landing-search-bar:focus {
+  outline: none;
+}
+
+.exec-text {
+  color: aliceblue;
+  font-family: "Georgia", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.search-button-e {
+  width: 30px;
+  height: 30px;
+  margin-left: -35px;
+}
+.landing-search-bar:focus::placeholder {
+  /* color: transparent;  */
+  opacity: 0;
+}
+
+.landing-examples {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 100px;
+  margin-top: -50;
+}
+.example-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the left */
+  margin: 0 auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.ex-header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.header-text {
+  color: aliceblue;
+  font-family: "Georgia", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  margin-bottom: 5px;
+}
+
+.hub-icon {
+  margin-left: 10px;
+  width: 15px;
+  height: 20px;
+}
+
+.e1-container,
+.e2-container,
+.e3-container {
+  width: auto;
+  max-width: 100%;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: -10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: rgba(71, 53, 35, 1);
+  padding-right: -10px;
+}
+.e1,
+.e2,
+.e3 {
+  width: 300px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Georgia", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  margin-left: -30px;
+}
+
+.linebreaks {
+  width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .hub {
+    max-width: calc(100% - 50px);
+  }
+
+  .landing-search-bar {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .bar-container {
+    padding: 30px;
+  }
+
+  .landing-search-button {
+    width: 25px;
+    height: 25px;
+  }
+  .landing-search {
+    width: 400px;
+    margin-left: 110px;
+    margin-right: 15px;
+    padding: 20px;
+    min-width: 250px;
+  }
+
+  .landing-examples.sidebar-expanded {
+    margin-left: 120px;
+  }
+
+  .landing-examples.sidebar-collapsed {
+    margin-left: 80px;
+  }
+  .scrollable-content {
+    overflow: auto;
+  }
+}
+
+.hub div,
+.landing-search-bar {
+  white-space: normal;
+  text-align: center;
+}

@@ -1,0 +1,90 @@
+.Layout {
+  display: flex;
+  flex-direction: column;
+  background-color: #948979;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.headbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #3c5b6f;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 100px;
+}
+
+.headbar-logo {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.headbar-title {
+  color: aliceblue;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  flex-shrink: 0;
+  margin-right: 850px;
+}
+
+.searchBar {
+  margin-left: auto;
+  width: auto;
+  padding: 0 1%;
+  flex-shrink: 0;
+}
+
+.main-page-banner {
+  margin-top: 100px; /* This should match the height of the headbar */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.main-page {
+  margin-top: 5%; /* This should match the height of the headbar */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  padding-bottom: 5%;
+}
+
+.headbar-welcome-message {
+  color: aliceblue;
+  font-family: "Georgia", serif;
+  /* margin-left: 500px;*/
+  font-size: 20px; /* Adjust size as needed */
+  align-self: right;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+  .headbar-logo,
+  .headbar-title,
+  .headbar-welcome-message {
+    font-size: 1rem;
+    width: auto;
+  }
+
+  .searchBar {
+    padding: 0 5%; /* Adjust padding for smaller screens */
+  }
+}

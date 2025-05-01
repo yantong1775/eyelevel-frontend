@@ -1,0 +1,166 @@
+.xray-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.xray-modal-content {
+  background-color: #fff;
+  width: 60%;
+  height: 95%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.xray-modal-header {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px; /* Set explicit height for header */
+}
+
+.xray-document-viewer {
+  flex-grow: 1;
+  background-color: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.xray-scroll-container {
+  width: 80%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.xray-page-wrapper {
+  /* This ensures the wrapper takes only the space needed by its content */
+  display: inline-block;
+}
+
+.xray-page-container {
+  /* Container for the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.xray-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.xray-page-image {
+  display: block;
+  /* objectFit: contain is set inline */
+}
+
+.xray-modal-footer {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  height: 60px; /* Set explicit height for footer */
+}
+
+.highlight-boxes-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.xray-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.xray-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #e74c3c;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Highlight box styles */
+.highlight-box {
+  position: absolute;
+  pointer-events: all;
+  transition: background-color 0.2s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .xray-modal-content {
+    background-color: #fff;
+    width: 80%;
+    height: 85%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .xray-scroll-container {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .xray-page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

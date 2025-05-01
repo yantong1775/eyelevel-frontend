@@ -1,0 +1,118 @@
+.detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.detail-container {
+  background-color: #252a44;
+  color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.detail-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.detail-description {
+  border-bottom: 1px solid #3a3f5a;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.chunk-identifier {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.chunk-type {
+  color: #aaa;
+}
+
+.detail-section {
+  margin-bottom: 10px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #2e3352;
+  border-radius: 4px;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.info-icon {
+  margin-right: 10px;
+  color: #66a3ff;
+  font-size: 0.8rem;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expand-icon {
+  color: #999;
+  margin-left: 8px;
+}
+
+.section-content {
+  background-color: #1e2238;
+  padding: 15px;
+  border-radius: 0 0 4px 4px;
+  margin-top: 2px;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.section-content pre {
+  white-space: pre-wrap;
+  font-family: monospace;
+  margin: 0;
+}
